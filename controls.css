@@ -1,0 +1,24 @@
+#controls {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#controls > div {
+  background-color: #ccc;
+  color: white;
+  border-radius: 50%;
+  height: 2.3rem;
+  width: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+#controls > div > svg {
+  height: 1.2rem;
+  width: 1.2rem;
+}

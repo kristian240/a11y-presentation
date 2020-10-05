@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kristian Djaković" />
+
+    <title>A11y Good Practices by Kristian Djaković</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="controls.css" />
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <div id="controls">
+      <div id="prev">
+        <svg
+          style="transform: rotate(-90deg)"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 420 451.8"
+        >
+          <path
+            fill="currentColor"
+            d="M345.4 248.3L151.2 442.6a31.6 31.6 0 11-44.8-44.8l172-171.9L106.3 54a31.6 31.6 0 0144.8-44.7l194.2 194.3a31.5 31.5 0 010 44.7z"
+          />
+        </svg>
+      </div>
+      <div id="next">
+        <svg
+          style="transform: rotate(90deg)"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 420 451.8"
+        >
+          <path
+            fill="currentColor"
+            d="M345.4 248.3L151.2 442.6a31.6 31.6 0 11-44.8-44.8l172-171.9L106.3 54a31.6 31.6 0 0144.8-44.7l194.2 194.3a31.5 31.5 0 010 44.7z"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="/text.js"></script>
+
+    <script>
+      let i = 0;
+
+      document.getElementById('content').innerHTML = marked(markdown);
+
+      window.scrollTo(0, 0);
+
+      const sections = document.querySelectorAll('section');
+
+      document.getElementById('prev').onclick = () => {
+        if (i === 0) return;
+
+        requestAnimationFrame(() => sections[--i].scrollIntoView({ behavior: 'smooth' }));
+      };
+
+      document.getElementById('next').onclick = () => {
+        if (i === sections.length - 1) return;
+
+        requestAnimationFrame(() => sections[++i].scrollIntoView({ behavior: 'smooth' }));
+      };
+    </script>
+  </body>
+</html>
