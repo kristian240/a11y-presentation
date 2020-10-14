@@ -2,7 +2,10 @@ const markdown = `
 <section>
 
 # A11y - good practices
+
 ##### Author: Kristian Djaković
+
+
 
 </section>
 
@@ -175,6 +178,29 @@ There are few ways to label an elemenet (usually some user interactive element l
 <section>
 
 ## Alerts
+
+### aria live region
+
+To make part of a page alert you simply set role attribute to alert
+
+![Aria alert](/images/alert.png)
+
+Aria live-region takes the focus to the region that is specified to be a live region.
+This way we tell the screen reader: *"Hey, this will be dynamically updated!"*
+
+## aria-live
+
+There are three *politness settings*
+
+* off - will not change current focus (default)
+* polite - will wait for the end of current reading
+* assertive - will become in focus immediately
+
+## aria-controls
+
+Set of the controls that will update the aria-live content
+
+* [Using role alert](https://www.w3.org/TR/wai-aria-practices/examples/alert/alert.html)
 
 </section>
 

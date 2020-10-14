@@ -150,6 +150,10 @@ p#heart {
 .red {
   color: #b50000;
 }
+p.hidden {
+  height: 0;
+  overflow: hidden;
+}
 
 /* Home Page
 --------------------------- */
