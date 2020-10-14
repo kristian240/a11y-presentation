@@ -34,7 +34,7 @@ Accessibility on the web developer is often a last thought and that needs to be 
 
 VO toggle 👉🏻 <kbd>Command</kbd> + <kbd>F5</kbd>
 
-VO key 👉🏼 <kbd>Control</kbd> + <kbd>Alt</kbd>
+VO key 👉🏼 <kbd>Control</kbd> + <kbd>Option</kbd>
 
 Navigation (next/previous) 👉🏽 <kbd>VO key</kbd> + <kbd>Right/Left Arrow</kbd>
 
@@ -48,12 +48,6 @@ Help 👉🏿 <kbd>VO key</kbd> + <kbd>H</kbd>
 
 ## Semantics
 
-### Why to use it?
-
-> 1. **Easier to develop with** — you get some functionality for free plus it is arguably easier to understand.
-2. **Better on mobile** — semantic HTML is arguably lighter in file size than non-semantic spaghetti code, and easier to make responsive.
-3. **Good for SEO** — search engines give more importance to keywords inside headings, links, etc. than keywords included in non-semantic divs, etc., so your documents will be more findable by customers.
-
 ### What do we mean with semantics?
 
 ![Div button](images/div-button.png)
@@ -61,6 +55,12 @@ Help 👉🏿 <kbd>VO key</kbd> + <kbd>H</kbd>
 VS.
 
 ![Semantic button](images/button-button.png)
+
+### Why to use it?
+
+> 1. **Easier to develop with** — you get some functionality for free plus it is arguably easier to understand.
+2. **Better on mobile** — semantic HTML is arguably lighter in file size than non-semantic spaghetti code, and easier to make responsive.
+3. **Good for SEO** — search engines give more importance to keywords inside headings, links, etc. than keywords included in non-semantic divs, etc., so your documents will be more findable by customers.
 
 ### Semantic elements
 
@@ -71,7 +71,7 @@ VS.
 * aside
 * section
 * article
-* [...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+* [more...](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 </section>
 
@@ -120,6 +120,18 @@ or has a descendant that is matched by :focus.
 
 ## ARIA attributes
 
+### What is ARIA?
+
+> Accessible Rich Internet Application
+
+* role (role)
+* aria-checked (state)
+* aria-label (property)
+* ...
+
+The difference between properties and states is that the value of the property is less likley to change
+but the value of the states is expected to change. 
+
 ARIA attibutes are really powerfull as they can:
 * help us style the element depenting of the state (has error, is disabled, ...) and impove site performace
 * imporve accessibillity our elements and the page
@@ -129,19 +141,6 @@ ARIA attibutes are really powerfull as they can:
 VS.
 
 ![Error-able element with aria](images/error-able-element-with-aria.png)
-
-### What is ARIA?
-
-> Accessible Rich Internet Application
-
-* aria-current (state)
-* role (role)
-* aria-checked (property)
-* aria-label (property)
-* ...
-
-The difference between properties and states is that the value of the property is less likley to change
-but the value of the states is expected to change. 
 
 ### No ARIA is better than bad ARIA
 
@@ -246,15 +245,9 @@ in order to skip the navigation and other non changing parts of the page
 
 ## Modals
 
-Lets go check what is expected behaviour on [ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal).
+First, lets go check what is expected behaviour on [ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal).
 
-Now when we know what is expected behaviour, lets implement that. [Unaccessible modal](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal)
-
-</section>
-
-<section>
-
-## **Bonus Exmple** - toggle button
+[Accessible modal example](dialog.html)
 
 </section>
 
