@@ -70,9 +70,9 @@
         requestAnimationFrame(() => sections[++i].scrollIntoView({ behavior: 'smooth' }));
       };
 
-      // window.onbeforeunload = function () {
-      //   window.scrollTo(0, 0);
-      // };
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
     </script>
   </body>
 </html>

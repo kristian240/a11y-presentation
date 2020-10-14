@@ -56,11 +56,11 @@ Help 👉🏿 <kbd>VO key</kbd> + <kbd>H</kbd>
 
 ### What do we mean with semantics?
 
-![Div button](/images/div-button.png)
+![Div button](images/div-button.png)
 
 VS.
 
-![Semantic button](/images/button-button.png)
+![Semantic button](images/button-button.png)
 
 ### Semantic elements
 
@@ -84,7 +84,7 @@ VS.
 > The \`tabindex\` global attribute indicates that its element can be focused,
 and where it participates in sequential keyboard navigation (usually with the <kbd>Tab</kbd> key, hence the name).
 
-![Tabindex example](/images/tabindex.png)
+![Tabindex example](images/tabindex.png)
 
 </section>
 
@@ -96,7 +96,7 @@ and where it participates in sequential keyboard navigation (usually with the <k
 
 > Focus ring is a visible outline (a ring) around the element that is currently in focus.
 
-![No outline](/images/focusring-remove.png)
+![No outline](images/focusring-remove.png)
 
 ### :focus-within
 
@@ -155,13 +155,13 @@ with potentially devastating effects on their corresponding non-visual experienc
 
 **Example 1** - Navigation
 
-![Navigation](/images/nav.png)
+![Navigation](images/nav.png)
 
 ----
 
 **Example 2** - Date picker
 
-![Datepicker](/images/datepicker.png)
+![Datepicker](images/datepicker.png)
 
 </section>
 
@@ -183,7 +183,7 @@ There are few ways to label an elemenet (usually some user interactive element l
 
 To make part of a page alert you simply set role attribute to alert
 
-![Aria alert](/images/alert.png)
+![Aria alert](images/alert.png)
 
 Aria live-region takes the focus to the region that is specified to be a live region.
 This way we tell the screen reader: *"Hey, this will be dynamically updated!"*
