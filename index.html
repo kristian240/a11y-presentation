@@ -11,10 +11,8 @@
     <link rel="stylesheet" href="controls.css" />
   </head>
   <body>
-    <div id="content"></div>
-
     <div id="controls">
-      <div id="prev">
+      <button id="prev">
         <svg
           style="transform: rotate(-90deg)"
           xmlns="http://www.w3.org/2000/svg"
@@ -25,8 +23,8 @@
             d="M345.4 248.3L151.2 442.6a31.6 31.6 0 11-44.8-44.8l172-171.9L106.3 54a31.6 31.6 0 0144.8-44.7l194.2 194.3a31.5 31.5 0 010 44.7z"
           />
         </svg>
-      </div>
-      <div id="next">
+      </button>
+      <button id="next">
         <svg
           style="transform: rotate(90deg)"
           xmlns="http://www.w3.org/2000/svg"
@@ -37,8 +35,10 @@
             d="M345.4 248.3L151.2 442.6a31.6 31.6 0 11-44.8-44.8l172-171.9L106.3 54a31.6 31.6 0 0144.8-44.7l194.2 194.3a31.5 31.5 0 010 44.7z"
           />
         </svg>
-      </div>
+      </button>
     </div>
+
+    <div id="content"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -64,6 +64,10 @@
 
         requestAnimationFrame(() => sections[++i].scrollIntoView({ behavior: 'smooth' }));
       };
+
+      // window.onbeforeunload = function () {
+      //   window.scrollTo(0, 0);
+      // };
     </script>
   </body>
 </html>

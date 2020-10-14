@@ -30,7 +30,7 @@ body {
   text-align: justify;
 }
 section {
-  padding: 5rem 0 0;
+  padding: 2rem 0 30vh;
   min-height: 100vh;
 }
 header,
@@ -71,12 +71,13 @@ h1 {
   font-weight: normal;
 }
 h2 {
+  margin-top: 0;
   font-weight: normal;
 }
 h3 {
+  margin-top: 0;
   font-weight: normal;
   font-style: italic;
-  margin-top: 3em;
 }
 p {
   margin-top: 0;
@@ -95,6 +96,7 @@ blockquote {
   margin-left: 1em;
   padding-left: 1em;
   border-left: 1px solid #ddd;
+  font-style: italic;
 }
 kbd {
   padding: 0.2em;

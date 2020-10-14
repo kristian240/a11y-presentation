@@ -5,7 +5,7 @@
   transform: translateY(-50%);
 }
 
-#controls > div {
+#controls > button {
   background-color: #ccc;
   color: white;
   border-radius: 50%;
@@ -16,9 +16,10 @@
   justify-content: center;
   margin: 1rem 0;
   cursor: pointer;
+  border: none;
 }
 
-#controls > div > svg {
+#controls > button > svg {
   height: 1.2rem;
   width: 1.2rem;
 }
