@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog Example | A11y Good Practices by Kristian Djaković</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      body {
+        font-family: BlinkMacSystemFont;
+      }
+
+      .dialog {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: none;
+      }
+
+      .dialog.open {
+        display: block;
+      }
+
+      .dialog-overlay {
+        position: absolute;
+        background-color: #2227;
+        width: 100%;
+        height: 100%;
+      }
+
+      .dialog-content {
+        background-color: #eee;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2rem 1rem 1rem;
+      }
+
+      .dialog-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        background: none;
+        font-weigth: bold;
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="open-dialog-btn">Open a modal</button>
+
+    <button onclick="alert('Hi!')">Some action</button>
+    <button onclick="alert('Hi two!')">Some other action</button>
+
+    <div role="dialog" class="dialog">
+      <div class="dialog-overlay"></div>
+      <div class="dialog-content">
+        <button id="close-dialog-btn" class="dialog-close">X</button>
+
+        <h2>Example modal/dialog</h2>
+
+        <p>This is some example text for a dummy dialog</p>
+
+        <button onclick="alert('Hi!')">Some action</button>
+        <button onclick="alert('Hi two!')">Some other action</button>
+      </div>
+    </div>
+
+    <script>
+      const dialogEl = document.querySelector('.dialog');
+
+      let lastActiveEl;
+
+      function openModal() {
+        // Save last focused element
+        lastActiveEl = document.activeElement;
+
+        // Make every element (except the dialog) inert
+        Array.from(document.body.children).forEach((child) => {
+          if (child === dialogEl) return;
+
+          child.inert = true;
+        });
+
+        // Show the dialog
+        dialogEl.classList.add('open');
+
+        // Focus somthing focusable inside of the dialog
+        dialogEl.querySelector('button').focus();
+      }
+
+      function closeModal() {
+        // Make every element un-inert
+        Array.from(document.body.children).forEach((child) => {
+          child.inert = false;
+        });
+
+        // Close the dialog
+        dialogEl.classList.remove('open');
+
+        // Focus the last focused element
+        lastActiveEl.focus();
+      }
+
+      // Close the dialog if ECS pressed
+      document.onkeydown = (e) => {
+        if (e.keyCode === 27) {
+          closeModal();
+        }
+      };
+
+      // Close the dialog if pressed somwhere off the modal
+      document.querySelector('.dialog-overlay').onclick = closeModal;
+
+      document.querySelector('#open-dialog-btn').onclick = openModal;
+
+      document.querySelector('#close-dialog-btn').onclick = closeModal;
+    </script>
+
+    <script src="inert.js"></script>
+  </body>
+</html>
