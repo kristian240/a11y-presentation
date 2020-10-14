@@ -118,7 +118,17 @@ or has a descendant that is matched by :focus.
 
 <section>
 
-## ARIA properties/roles/states
+## ARIA attributes
+
+ARIA attibutes are really powerfull as they can:
+* help us style the element depenting of the state (has error, is disabled, ...) and impove site performace
+* imporve accessibillity our elements and the page
+
+![Error-able element without aria](images/error-able-element-no-aria.png)
+
+VS.
+
+![Error-able element with aria](images/error-able-element-with-aria.png)
 
 ### What is ARIA?
 
@@ -188,7 +198,7 @@ To make part of a page alert you simply set role attribute to alert
 Aria live-region takes the focus to the region that is specified to be a live region.
 This way we tell the screen reader: *"Hey, this will be dynamically updated!"*
 
-## aria-live
+### aria-live
 
 There are three *politness settings*
 
@@ -196,11 +206,19 @@ There are three *politness settings*
 * polite - will wait for the end of current reading
 * assertive - will become in focus immediately
 
-## aria-controls
+### aria-atomic
+
+If set to true the entire content of the element will be presented.
+
+### aria-controls
 
 Set of the controls that will update the aria-live content
 
-* [Using role alert](https://www.w3.org/TR/wai-aria-practices/examples/alert/alert.html)
+### exmples
+
+* [Using role alert #1](https://www.w3.org/TR/wai-aria-practices/examples/alert/alert.html)
+
+* [Using role alert #2](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions#Dropdown_box_updates_useful_onscreen_information)
 
 </section>
 
@@ -208,17 +226,35 @@ Set of the controls that will update the aria-live content
 
 ## Headings & landmarks
 
+Usually a first thing users do is to scan a page via headings and landmarks
+
+### Headings
+
+As a developer you want to follow and implement headings levels one by one.
+
+**Please,** do not skip heading levels since that is wrong on so many levels.
+
+### Landmarks
+
+Also, one way to navigate the site is to follow the landmarks. For example,
+this way the user can immediatlly jump to *main* part of the page
+in order to skip the navigation and other non changing parts of the page
+
 </section>
 
 <section>
 
-## Dialogs
+## Modals
+
+Lets go check what is expected behaviour on [ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal).
+
+Now when we know what is expected behaviour, lets implement that. [Unaccessible modal](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal)
 
 </section>
 
 <section>
 
-## **Exmple** - toggle button
+## **Bonus Exmple** - toggle button
 
 </section>
 
@@ -233,6 +269,14 @@ Set of the controls that will update the aria-live content
 * [Cool code snippets](https://carbon.now.sh/)
 
 * [Audis.io](https://www.aditus.io/aria/aria-current/)
+
+* [WAI ARIA authoring practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
+
+* [inert polyfill](https://github.com/WICG/inert)
+
+## More content
+
+* [eBay MIND patterns](https://ebay.gitbook.io/mindpatterns/)
 
 </section>
 `;
