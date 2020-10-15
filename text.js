@@ -3,9 +3,9 @@ const markdown = `
 
 # A11y - good practices
 
-##### Author: Kristian Djaković
+Author: Kristian Djaković
 
-
+![Microsoft Inclusive](https://www.netokracija.com/wp-content/uploads/2020/10/microsoft_inclusive.jpg)
 
 </section>
 
